@@ -42,7 +42,7 @@ export default function WeatherInfo() {
               <span className="temperature" id="temperature">
                 35
               </span>
-              <span className="units">
+              {/* <span className="units">
                 <a href="#" id="celsius-link" className="active">
                   °C
                 </a>
@@ -50,7 +50,7 @@ export default function WeatherInfo() {
                 <a href="#" id="fahrenheit-link">
                   °F
                 </a>
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
