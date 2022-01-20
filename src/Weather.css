@@ -1,0 +1,137 @@
+.Search form {
+  margin-top: 10px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 25px;
+}
+
+.Search .search-input {
+  background: #faf8ff;
+  border-color: #ffc4c0;
+  border-radius: 6px;
+  color: #596266;
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  padding: 15px 20px;
+}
+
+.Search .btn {
+  background: #ffc4c0;
+  border-color: #ffc4c0;
+  border-radius: 6px;
+  font-size: 25px;
+  height: 50px;
+}
+
+.Search .btn:hover {
+  background: #faf8ff;
+  border-color: #ffc4c0;
+  transition: all 200ms ease-in-out;
+}
+
+.weather-app .pindrop-emoji {
+  color: #212a2e;
+  font-size: 32px;
+  text-align: left;
+}
+
+.weather-app .city-name {
+  font-family: "Cutive Mono", monospace;
+  display: inline;
+  color: #212a2e;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info ul {
+  margin: 0;
+  padding: 0;
+}
+.weather-info li {
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #596266;
+  font-size: 16px;
+  line-height: 20px;
+  list-style: none;
+}
+
+.weather-info .humidity,
+.wind-speed,
+.weather-description {
+  color: #f65282;
+  font-weight: 700;
+}
+
+.weather-info .weather-description:first-letter {
+  text-transform: capitalize;
+}
+
+.weather-info .temperature-container {
+  margin-top: 10px;
+  max-height: 72px;
+  align-items: center;
+}
+
+.weather-app .temperature {
+  color: #212a2e;
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.weather-app .units {
+  color: #212a2e;
+  font-size: 16px;
+  line-height: 36px;
+  font-weight: 400;
+  position: relative;
+  top: -34px;
+  text-decoration: none;
+}
+
+.units .active {
+  color: #212a2e;
+  cursor: default;
+  text-decoration: none;
+}
+
+.units a {
+  color: #859196;
+  text-decoration: none;
+}
+
+.weather-forecast {
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+
+.weather-forecast .forecast-day {
+  color: #596266;
+}
+
+.weather-app .footer {
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  line-height: 18px;
+  text-align: center;
+  color: #596266;
+}
+
+.weather-app .footer a {
+  color: #f65282;
+  text-decoration: none;
+}
+
+.weather-app .footer a:hover {
+  color: #ffc4c0;
+  transition: all 200ms ease-in-out;
+}
