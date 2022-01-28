@@ -1,18 +1,18 @@
 import React from "react";
 import "./App.css";
-import Search from "./Search";
-import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast";
+import Weather from "./Weather";
+
+// import WeatherForecast from "./WeatherForecast";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <div className="weather-app">
-          <Search />
-          <WeatherInfo />
+          <Weather />
+
           <br />
-          <WeatherForecast />
+          {/* <WeatherForecast /> */}
           <p className="footer">
             <a href="https://github.com/Clarefairy/weather-app-react" rel="noreferrer" target="_blank">
               Open-source code
