@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="weather-app">
-          <Weather />
+          <Weather defaultCity="singapore" />
 
           <br />
           {/* <WeatherForecast /> */}
