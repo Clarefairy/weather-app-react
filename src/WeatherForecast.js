@@ -1,33 +1,46 @@
-// import React from "react";
-// import "./Weather.css";
+import React, { useState, useEffect } from "react";
+import "./Weather.css";
+import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
-// export default function WeatherForecast() {
-//   return (
-//     <div className="row weather-forecast align-items-start">
-//       <div className="col-2 forecast-day">
-//         Thu ⛅️
-//         <div className="forecast-temp">7°/15°</div>
-//       </div>
-//       <div className="col-2 forecast-day">
-//         Fri 🌤
-//         <div className="forecast-temp">10°/14°</div>
-//       </div>
-//       <div className="col-2 forecast-day">
-//         Sat ⛅️
-//         <div className="forecast-temp">10°/15°</div>
-//       </div>
-//       <div className="col-2 forecast-day">
-//         Sun 🌧
-//         <div className="forecast-temp">9°/14°</div>
-//       </div>
-//       <div className="col-2 forecast-day">
-//         Mon 🌧
-//         <div className="forecast-temp">7°/11°</div>
-//       </div>
-//       <div className="col-2 forecast-day">
-//         Tue ⛅️
-//         <div className="forecast-temp">8°/11°</div>
-//       </div>
-//     </div>
-//   );
-// }
+export default function WeatherForecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+  console.log(props);
+  function load() {
+    let apiKey = "cfda78dbc1d12739c0aa78fa0330cf73";
+    let lat = props.forecastInfo.lat;
+    let lon = props.forecastInfo.lon;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.forecastInfo]);
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  if (loaded) {
+    return (
+      <div className="row weather-forecast align-items-start">
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 6) {
+            return (
+              <div className="col-2 daily-forecast" key={index}>
+                <WeatherForecastDay data={dailyForecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
+    );
+  } else {
+    load();
+    return null;
+  }
+}

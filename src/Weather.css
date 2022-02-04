@@ -117,6 +117,29 @@
   color: #596266;
 }
 
+.weather-forecast .daily-forecast {
+  text-align: center;
+}
+.weather-forecast .icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-forecast .forecast-temperature {
+  font-style: normal;
+  font-size: 18px;
+  color: #f65282;
+  font-weight: 700;
+}
+.weather-forecast .forecast-temperature-min {
+  margin-left: 20px;
+  opacity: 0.6;
+}
+
+.weather-forecast .forecast-temperature-min-unit {
+  opacity: 0.6;
+}
+
 .weather-app .footer {
   font-size: 14px;
   margin-top: 40px;

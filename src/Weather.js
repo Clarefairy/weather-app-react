@@ -17,10 +17,11 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      coordinates: response.data.coord,
     });
   }
   function search() {
-    const apiKey = "7bf3ba8d3f15df7b82b1c7bfba361d28";
+    const apiKey = "cfda78dbc1d12739c0aa78fa0330cf73";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
